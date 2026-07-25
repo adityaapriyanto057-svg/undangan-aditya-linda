@@ -3,120 +3,146 @@
 }
 
 body {
-    margin: 0;
+
+    margin:0;
     font-family: "Georgia", serif;
+    background:#f7efe2;
+    color:#3b1d0b;
+
 }
 
 
 /* COVER */
 
-.cover {
+.hero {
 
-    min-height: 100vh;
+    min-height:100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    text-align: center;
-
-    color: white;
+    text-align:center;
 
     background:
     linear-gradient(
-        rgba(5,20,45,0.85),
-        rgba(5,20,45,0.95)
-    );
+    rgba(60,0,0,.75),
+    rgba(40,0,0,.85)
+    ),
+    url("images/cover.jpg");
 
-    padding: 30px;
+    background-size:cover;
+    background-position:center;
 
-}
+    position:relative;
 
-
-.content {
-
-    max-width: 450px;
-
-}
-
-
-/* JUDUL */
-
-.title {
-
-    letter-spacing: 5px;
-
-    font-size: 14px;
-
-    color: #d4af37;
-
-    margin-bottom: 35px;
+    overflow:hidden;
 
 }
 
 
-/* NAMA */
+
+.javanese-frame {
+
+    border:3px solid #d4af37;
+
+    padding:45px 30px;
+
+    width:85%;
+    max-width:420px;
+
+    background:
+    rgba(0,0,0,.35);
+
+    color:white;
+
+    border-radius:5px;
+
+}
+
+
+
+.small-title {
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    color:#f5d77a;
+
+}
+
+
 
 h1 {
 
-    font-size: 65px;
+    font-size:60px;
 
-    line-height: 1.1;
+    font-weight:normal;
 
-    margin: 0;
+    line-height:1.1;
 
-    color: #f5d77a;
-
-    font-weight: normal;
+    color:#f8df8b;
 
 }
+
 
 
 h1 span {
 
-    font-size: 35px;
+    font-size:35px;
 
     color:white;
 
 }
 
 
-/* TANGGAL */
 
-.date {
+.gold-line {
 
-    margin-top: 40px;
+    height:2px;
 
-    font-size: 20px;
-
-    line-height: 1.7;
-
-}
-
-
-.date strong {
-
-    color:#d4af37;
-
-}
-
-
-/* TOMBOL */
-
-button {
-
-    margin-top: 40px;
-
-    padding: 15px 45px;
-
-    border-radius: 50px;
-
-    border:none;
+    width:120px;
 
     background:#d4af37;
 
-    color:#111;
+    margin:25px auto;
+
+}
+
+
+
+.date {
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+
+.guest {
+
+    margin-top:40px;
+
+}
+
+
+
+button {
+
+    margin-top:30px;
+
+    padding:14px 45px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#d4af37;
+
+    color:#3b1d0b;
 
     font-size:16px;
 
@@ -125,15 +151,115 @@ button {
 }
 
 
-/* ORNAMEN */
 
-.ornament {
 
-    color:#d4af37;
+
+/* OPENING */
+
+
+.opening {
+
+    padding:70px 25px;
+
+    text-align:center;
+
+    background:#fff8ec;
+
+}
+
+
+
+.opening h2 {
+
+    color:#8b5e22;
+
+}
+
+
+
+.opening p {
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+
+
+
+/* COUPLE */
+
+
+.couple {
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.couple h2 {
+
+    color:#8b5e22;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.person {
+
+    margin-bottom:40px;
+
+}
+
+
+
+.person img {
+
+    width:180px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #d4af37;
+
+}
+
+
+
+.person h3 {
 
     font-size:30px;
 
-    margin:30px;
+    color:#7b1e1e;
+
+}
+
+
+
+.person p {
+
+    line-height:1.7;
+
+}
+
+
+
+.heart {
+
+    font-size:35px;
+
+    margin:20px;
 
 }
 
@@ -141,19 +267,22 @@ button {
 
 /* MOBILE */
 
+
 @media(max-width:480px){
 
-    h1 {
 
-        font-size:50px;
+h1 {
 
-    }
+    font-size:45px;
+
+}
 
 
-    .title {
+.javanese-frame {
 
-        font-size:12px;
+    padding:35px 20px;
 
-    }
+}
+
 
 }
