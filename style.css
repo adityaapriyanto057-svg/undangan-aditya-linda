@@ -1,3 +1,7 @@
+/* =========================
+RESET
+========================= */
+
 *{
     box-sizing:border-box;
 }
@@ -14,19 +18,7 @@ body{
 
     font-family:"Georgia","Times New Roman",serif;
 
-    background:#f8efdf;
-
-    color:#4a210f;
-
-}
-
-
-
-section{
-
-    padding:80px 25px;
-
-    text-align:center;
+    background:#000;
 
 }
 
@@ -37,7 +29,7 @@ section{
 
 
 /* =========================
-   COVER UTAMA
+COVER UTAMA
 ========================= */
 
 
@@ -53,11 +45,9 @@ section{
 
     align-items:center;
 
+    padding:20px;
+
     background:#000;
-
-    position:relative;
-
-    overflow:hidden;
 
 }
 
@@ -67,19 +57,20 @@ section{
 
 
 
-/* KOTAK COVER */
+/* =========================
+KOTAK COVER
+========================= */
 
 
 .cover-card{
 
 
-    width:90%;
-
+    width:100%;
 
     max-width:430px;
 
 
-    height:95vh;
+    height:90vh;
 
 
     position:relative;
@@ -89,6 +80,9 @@ section{
 
 
     border:3px solid #d4af37;
+
+
+    border-radius:15px;
 
 
     box-shadow:
@@ -103,7 +97,10 @@ section{
 
 
 
-/* GAMBAR COVER DALAM KOTAK */
+
+/* =========================
+GAMBAR COVER DALAM KOTAK
+========================= */
 
 
 .cover-image{
@@ -121,13 +118,7 @@ section{
     object-fit:cover;
 
 
-    top:0;
-
-
-    left:0;
-
-
-    z-index:1;
+    inset:0;
 
 
     animation:
@@ -167,8 +158,9 @@ section{
 
 
 
-
-/* LAPISAN GELAP DI ATAS GAMBAR */
+/* =========================
+LAPISAN GELAP GAMBAR
+========================= */
 
 
 .cover-overlay{
@@ -178,9 +170,6 @@ section{
 
 
     inset:0;
-
-
-    z-index:2;
 
 
     display:flex;
@@ -193,7 +182,6 @@ section{
 
 
     background:
-
 
     linear-gradient(
 
@@ -213,13 +201,18 @@ section{
 
 
 
-/* ISI TULISAN */
+/* =========================
+ISI TULISAN
+========================= */
 
 
 .cover-content{
 
 
-    width:90%;
+    width:85%;
+
+
+    padding:35px 20px;
 
 
     text-align:center;
@@ -228,10 +221,85 @@ section{
     color:white;
 
 
+    background:
+
+    rgba(0,0,0,.45);
+
+
+    border:
+
+    2px solid #d4af37;
+
+
     position:relative;
 
 
     z-index:3;
+
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.7);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* FRAME EMAS BERGERAK */
+
+
+.cover-content::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:-8px;
+
+
+    border:
+
+    1px solid #d4af37;
+
+
+    animation:
+
+    frameGlow 4s infinite alternate;
+
+
+}
+
+
+
+@keyframes frameGlow{
+
+
+from{
+
+box-shadow:
+
+0 0 5px #d4af37;
+
+}
+
+
+to{
+
+box-shadow:
+
+0 0 30px #ffd700;
+
+}
 
 
 }
@@ -246,7 +314,7 @@ section{
 /* CAHAYA EMAS */
 
 
-.cover-card::before{
+.cover-card::after{
 
 
     content:"";
@@ -258,15 +326,11 @@ section{
     inset:0;
 
 
-    z-index:2;
-
-
     background:
-
 
     radial-gradient(
 
-    circle at center,
+    circle,
 
     rgba(212,175,55,.35),
 
@@ -280,8 +344,10 @@ section{
     goldGlow 6s infinite alternate;
 
 
-}
+    z-index:2;
 
+
+}
 
 
 
@@ -290,86 +356,19 @@ section{
 @keyframes goldGlow{
 
 
-    from{
+from{
 
-        opacity:.3;
-
-    }
-
-
-    to{
-
-        opacity:.9;
-
-    }
+opacity:.3;
 
 }
 
 
+to{
 
-
-
-
-
-
-
-/* FRAME EMAS */
-
-
-.cover-card::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    inset:12px;
-
-
-    border:2px solid #d4af37;
-
-
-    z-index:5;
-
-
-    animation:
-
-    frameGlow 4s infinite alternate;
-
-
-    pointer-events:none;
-
+opacity:.9;
 
 }
 
-
-
-
-
-
-@keyframes frameGlow{
-
-
-    from{
-
-        box-shadow:
-
-        0 0 5px #d4af37;
-
-
-    }
-
-
-    to{
-
-        box-shadow:
-
-        0 0 35px #d4af37;
-
-
-    }
 
 }
 
@@ -382,7 +381,7 @@ section{
 
 
 /* =========================
-   TEXT COVER
+TULISAN COVER
 ========================= */
 
 
@@ -398,12 +397,7 @@ section{
     color:#f5d77a;
 
 
-    margin-bottom:20px;
-
-
 }
-
-
 
 
 
@@ -411,7 +405,7 @@ section{
 h1{
 
 
-    font-size:60px;
+    font-size:55px;
 
 
     line-height:1.1;
@@ -427,9 +421,6 @@ h1{
 
 
 }
-
-
-
 
 
 
@@ -461,13 +452,10 @@ h1 span{
     background:#d4af37;
 
 
-    margin:25px auto;
+    margin:20px auto;
 
 
 }
-
-
-
 
 
 
@@ -478,7 +466,7 @@ h1 span{
     font-size:20px;
 
 
-    line-height:1.8;
+    line-height:1.7;
 
 
     color:white;
@@ -490,11 +478,10 @@ h1 span{
 
 
 
-
 .guest{
 
 
-    margin-top:35px;
+    margin-top:30px;
 
 
     color:white;
@@ -538,10 +525,9 @@ button{
     cursor:pointer;
 
 
-    transition:.3s;
-
-
 }
+
+
 
 
 
@@ -561,93 +547,36 @@ button:hover{
 
 
 
+/* MOBILE */
 
 
-/* =========================
- OPENING
-========================= */
+@media(max-width:480px){
 
 
-.opening{
+.cover-card{
 
 
-    background:#fff8eb;
-
-
-    line-height:1.8;
+    height:88vh;
 
 
 }
 
 
 
-.opening::before{
+h1{
 
 
-    content:"✦ ❖ ✦";
-
-
-    color:#d4af37;
-
-
-    font-size:35px;
-
-
-    display:block;
-
-
-    margin-bottom:20px;
+    font-size:45px;
 
 
 }
 
 
 
+.small-title{
 
 
-.opening h2{
-
-
-    color:#7b1e1e;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- BRIDE GROOM
-========================= */
-
-
-.couple{
-
-
-    background:#f8efdf;
-
-
-}
-
-
-
-
-
-
-.couple h2,
-.countdown h2,
-.reception h2,
-.gift h2,
-.rsvp h2,
-.thank h2{
-
-
-    color:#7b1e1e;
+    font-size:12px;
 
 
     letter-spacing:3px;
@@ -655,459 +584,6 @@ button:hover{
 
 }
 
-
-
-
-
-
-.person{
-
-
-    margin:40px auto;
-
-
-}
-
-
-
-
-
-.person img{
-
-
-    width:200px;
-
-
-    height:240px;
-
-
-    object-fit:cover;
-
-
-    border-radius:50%;
-
-
-    border:
-
-    6px solid #d4af37;
-
-
-    box-shadow:
-
-    0 0 25px rgba(212,175,55,.5);
-
-
-}
-
-
-
-
-
-.person h3{
-
-
-    font-size:32px;
-
-
-    color:#7b1e1e;
-
-
-}
-
-
-
-
-
-
-.heart{
-
-
-    font-size:40px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- COUNTDOWN
-========================= */
-
-
-.countdown{
-
-
-    background:#fff8eb;
-
-
-}
-
-
-
-
-
-.timer{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    gap:15px;
-
-
-    margin:40px auto;
-
-
-}
-
-
-
-
-
-.timer div{
-
-
-    width:80px;
-
-
-    padding:15px;
-
-
-    background:#5b1010;
-
-
-    border:
-
-    2px solid #d4af37;
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-.timer span{
-
-
-    font-size:30px;
-
-
-    color:#f5d77a;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- PREWEDDING
-========================= */
-
-
-.prewedding{
-
-
-    max-width:450px;
-
-
-    margin:auto;
-
-
-}
-
-
-
-
-
-.prewedding img{
-
-
-    width:100%;
-
-
-    border:
-
-    8px solid #d4af37;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- RECEPTION
-========================= */
-
-
-.reception{
-
-
-    background:#5b1010;
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-.reception h2{
-
-
-    color:#f5d77a;
-
-
-}
-
-
-
-
-
-.event-box{
-
-
-    max-width:450px;
-
-
-    margin:auto;
-
-
-    padding:35px 20px;
-
-
-    border:
-
-    2px solid #d4af37;
-
-
-}
-
-
-
-
-
-.event-box h3{
-
-
-    color:#f5d77a;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- GIFT
-========================= */
-
-
-.gift{
-
-
-    background:#fff8eb;
-
-
-}
-
-
-
-
-
-.gift h3{
-
-
-    font-size:30px;
-
-
-    color:#7b1e1e;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- RSVP
-========================= */
-
-
-.rsvp{
-
-
-    background:#ead5ad;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- THANK YOU
-========================= */
-
-
-.thank{
-
-
-    background:#5b1010;
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-.thank h2{
-
-
-    color:#f5d77a;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
- MOBILE
-========================= */
-
-
-@media(max-width:480px){
-
-
-    .cover-card{
-
-
-        width:92%;
-
-
-        height:95vh;
-
-
-    }
-
-
-
-    h1{
-
-
-        font-size:45px;
-
-
-    }
-
-
-
-    .small-title{
-
-
-        font-size:12px;
-
-
-        letter-spacing:3px;
-
-
-    }
-
-
-
-
-    .date{
-
-
-        font-size:18px;
-
-
-    }
-
-
-
-    .timer{
-
-
-        gap:5px;
-
-
-    }
-
-
-
-
-    .timer div{
-
-
-        width:65px;
-
-
-    }
-
-
-
-
-
-    .timer span{
-
-
-        font-size:24px;
-
-
-    }
 
 
 }
