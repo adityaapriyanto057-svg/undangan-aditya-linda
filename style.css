@@ -57,24 +57,21 @@ COVER PREMIUM
     overflow:hidden;
 
 
-    background:
+    background-image:
 
     linear-gradient(
     rgba(40,0,0,.55),
-    rgba(40,0,0,.80)
+    rgba(40,0,0,.75)
     ),
 
-    url("images/Coverjawaundangan.png");
+    url("./images/Coverjawaundangan.png");
 
 
     background-size:cover;
 
     background-position:center;
 
-    animation:zoomBackground 18s infinite alternate;
-
 }
-
 
 
 
