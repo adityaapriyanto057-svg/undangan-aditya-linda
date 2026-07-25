@@ -441,3 +441,83 @@ gap:6px;
 
 
 }
+/* CURTAIN OPENING */
+
+.curtain{
+
+position:fixed;
+
+top:0;
+
+width:50%;
+
+height:100vh;
+
+background:#5b1010;
+
+z-index:10;
+
+transition:2s ease;
+
+}
+
+
+
+.curtain.left{
+
+left:0;
+
+}
+
+
+
+.curtain.right{
+
+right:0;
+
+}
+
+
+
+.opened .curtain.left{
+
+transform:translateX(-100%);
+
+}
+
+
+
+.opened .curtain.right{
+
+transform:translateX(100%);
+
+}
+
+
+
+/* ANIMATION HERO */
+
+
+.hero{
+
+animation:fadeIn 2s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
