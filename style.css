@@ -25,7 +25,7 @@ body{
 
 
 /* =========================
-   SECTION
+SECTION
 ========================= */
 
 
@@ -45,21 +45,18 @@ section{
 
 
 /* =========================
-   COVER
+COVER
 ========================= */
 
 
 .hero{
-
 
     min-height:100vh;
 
 
     display:flex;
 
-
     justify-content:center;
-
 
     align-items:center;
 
@@ -67,14 +64,11 @@ section{
 
     position:relative;
 
-
     overflow:hidden;
 
 
 
-
     background:
-
 
 
     linear-gradient(
@@ -84,7 +78,6 @@ section{
     rgba(50,0,0,.85)
 
     ),
-
 
 
     url("images/jawa.jpg");
@@ -97,14 +90,12 @@ section{
     background-position:center;
 
 
-
 }
 
 
 
 
-
-/* efek cahaya bergerak */
+/* cahaya emas bergerak */
 
 
 .hero::before{
@@ -114,7 +105,6 @@ section{
 
 
     position:absolute;
-
 
 
     width:350px;
@@ -139,12 +129,9 @@ section{
 
 
 
-
     animation:
 
-
-    lightMove 6s infinite alternate;
-
+    glowMove 6s infinite alternate;
 
 
 }
@@ -152,24 +139,19 @@ section{
 
 
 
-@keyframes lightMove{
+@keyframes glowMove{
 
 
     from{
 
-
         transform:translate(-120px,-80px);
-
 
     }
 
 
-
     to{
 
-
         transform:translate(120px,80px);
-
 
     }
 
@@ -203,22 +185,19 @@ section{
 
 
 
-    border:
-
-
-    3px solid #d4af37;
-
-
-
     background:
-
 
     rgba(0,0,0,.45);
 
 
 
-    color:white;
+    border:
 
+    3px solid #d4af37;
+
+
+
+    color:white;
 
 
 
@@ -230,7 +209,6 @@ section{
 
 
 }
-
 
 
 
@@ -278,8 +256,8 @@ h1{
     color:#f5d77a;
 
 
-
 }
+
 
 
 
@@ -293,7 +271,6 @@ h1 span{
 
 
 }
-
 
 
 
@@ -341,6 +318,7 @@ h1 span{
 
 
 
+
 .guest{
 
 
@@ -348,6 +326,7 @@ h1 span{
 
 
 }
+
 
 
 
@@ -406,7 +385,6 @@ button{
     transition:.3s;
 
 
-
 }
 
 
@@ -429,9 +407,8 @@ button:hover{
 
 
 
-
 /* =========================
-   OPENING
+OPENING
 ========================= */
 
 
@@ -443,9 +420,9 @@ button:hover{
 
     linear-gradient(
 
-    rgba(255,248,235,.9),
+    rgba(255,248,235,.92),
 
-    rgba(255,248,235,.95)
+    rgba(255,248,235,.98)
 
     ),
 
@@ -457,13 +434,94 @@ button:hover{
     background-size:cover;
 
 
+    background-position:center;
+
+
 
     line-height:1.8;
 
 
 
+    position:relative;
+
+
+    overflow:hidden;
+
+
 }
 
+
+
+
+
+.opening::before{
+
+
+    content:"✦  ❖  ✦";
+
+
+
+    display:block;
+
+
+
+    font-size:35px;
+
+
+
+    color:#d4af37;
+
+
+
+    margin-bottom:25px;
+
+
+
+    animation:
+
+    floating 4s infinite ease-in-out;
+
+
+
+}
+
+
+
+
+
+@keyframes floating{
+
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.7;
+
+    }
+
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+        opacity:1;
+
+    }
+
+
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:.7;
+
+    }
+
+
+}
 
 
 
@@ -485,9 +543,8 @@ button:hover{
 
 
 /* =========================
-   COUPLE
+BRIDE GROOM
 ========================= */
-
 
 
 .couple{
@@ -518,7 +575,6 @@ button:hover{
 
 
 }
-
 
 
 
@@ -556,14 +612,15 @@ button:hover{
 
 
 
-    border:6px solid #d4af37;
+    border:
+
+    6px solid #d4af37;
 
 
 
     box-shadow:
 
     0 0 20px rgba(0,0,0,.25);
-
 
 
 }
@@ -590,6 +647,7 @@ button:hover{
 
 
 
+
 .heart{
 
 
@@ -607,9 +665,8 @@ button:hover{
 
 
 /* =========================
-   COUNTDOWN
+COUNTDOWN
 ========================= */
-
 
 
 .countdown{
@@ -631,9 +688,7 @@ button:hover{
     display:flex;
 
 
-
     justify-content:center;
-
 
 
     gap:15px;
@@ -641,7 +696,6 @@ button:hover{
 
 
     margin:40px auto;
-
 
 
 }
@@ -667,7 +721,9 @@ button:hover{
 
 
 
-    border:2px solid #d4af37;
+    border:
+
+    2px solid #d4af37;
 
 
 
@@ -693,9 +749,7 @@ button:hover{
     color:#f5d77a;
 
 
-
 }
-
 
 
 
@@ -722,7 +776,7 @@ button:hover{
 
 
 /* =========================
-   PREWEDDING
+PREWEDDING
 ========================= */
 
 
@@ -742,6 +796,7 @@ button:hover{
 
 
 
+
 .prewedding img{
 
 
@@ -749,7 +804,9 @@ button:hover{
 
 
 
-    border:8px solid #d4af37;
+    border:
+
+    8px solid #d4af37;
 
 
 
@@ -778,7 +835,7 @@ button:hover{
 
 
 /* =========================
-   RECEPTION
+RECEPTION
 ========================= */
 
 
@@ -788,9 +845,7 @@ button:hover{
     background:#5b1010;
 
 
-
     color:white;
-
 
 
 }
@@ -827,7 +882,9 @@ button:hover{
 
 
 
-    border:2px solid #d4af37;
+    border:
+
+    2px solid #d4af37;
 
 
 
@@ -856,7 +913,7 @@ button:hover{
 
 
 /* =========================
-   GIFT
+GIFT
 ========================= */
 
 
@@ -867,8 +924,6 @@ button:hover{
 
 
 }
-
-
 
 
 
@@ -894,7 +949,7 @@ button:hover{
 
 
 /* =========================
-   RSVP
+RSVP
 ========================= */
 
 
@@ -915,7 +970,7 @@ button:hover{
 
 
 /* =========================
-   THANK YOU
+THANK YOU
 ========================= */
 
 
@@ -928,10 +983,7 @@ button:hover{
     color:white;
 
 
-
 }
-
-
 
 
 
@@ -954,70 +1006,50 @@ button:hover{
 
 
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 
 @media(max-width:480px){
 
 
-
     h1{
-
 
         font-size:45px;
 
-
     }
-
-
 
 
 
     .javanese-frame{
 
-
         padding:35px 20px;
 
-
     }
-
-
 
 
 
     .timer{
 
-
         gap:5px;
 
-
     }
-
-
 
 
 
     .timer div{
 
-
         width:65px;
 
-
     }
-
-
 
 
 
     .timer span{
 
-
         font-size:24px;
 
-
     }
-
 
 
 }
