@@ -9,22 +9,32 @@ html{
 
 
 body{
+
     margin:0;
-    font-family:"Georgia", "Times New Roman", serif;
+
+    font-family:"Georgia","Times New Roman",serif;
+
     background:#f8efdf;
+
     color:#4a210f;
+
 }
 
 
-/* =========================
+
+/* ==========================
    CURTAIN OPENING
-========================= */
+========================== */
+
 
 .curtain{
 
     position:fixed;
+
     top:0;
+
     width:50%;
+
     height:100vh;
 
     background:
@@ -41,14 +51,21 @@ body{
 }
 
 
+
 .curtain.left{
+
     left:0;
+
 }
+
 
 
 .curtain.right{
+
     right:0;
+
 }
+
 
 
 body.opened .curtain.left{
@@ -56,6 +73,7 @@ body.opened .curtain.left{
     transform:translateX(-100%);
 
 }
+
 
 
 body.opened .curtain.right{
@@ -66,9 +84,11 @@ body.opened .curtain.right{
 
 
 
-/* =========================
+
+
+/* ==========================
    SECTION
-========================= */
+========================== */
 
 
 section{
@@ -81,9 +101,11 @@ section{
 
 
 
-/* =========================
+
+
+/* ==========================
    COVER
-========================= */
+========================== */
 
 
 .hero{
@@ -92,9 +114,9 @@ section{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
 
     background:
@@ -121,6 +143,7 @@ section{
 
     max-width:430px;
 
+
     padding:45px 25px;
 
 
@@ -128,6 +151,7 @@ section{
 
 
     background:
+
     rgba(0,0,0,.45);
 
 
@@ -135,9 +159,12 @@ section{
 
 
     box-shadow:
+
     0 0 30px rgba(212,175,55,.5);
 
 }
+
+
 
 
 
@@ -171,9 +198,9 @@ h1{
 
 h1 span{
 
-    color:white;
-
     font-size:35px;
+
+    color:white;
 
 }
 
@@ -218,27 +245,22 @@ button{
 
     padding:14px 45px;
 
-
     border:none;
 
     border-radius:50px;
 
-
     background:#d4af37;
-
 
     color:#4a210f;
 
-
     font-size:16px;
 
-
     cursor:pointer;
-
 
     transition:.3s;
 
 }
+
 
 
 button:hover{
@@ -249,9 +271,11 @@ button:hover{
 
 
 
-/* =========================
- OPENING
-========================= */
+
+
+/* ==========================
+   OPENING
+========================== */
 
 
 .opening{
@@ -272,9 +296,11 @@ button:hover{
 
 
 
-/* =========================
- BRIDE GROOM
-========================= */
+
+
+/* ==========================
+   COUPLE
+========================== */
 
 
 .couple{
@@ -314,15 +340,12 @@ button:hover{
 
     height:240px;
 
-
     object-fit:cover;
-
 
     border-radius:50%;
 
 
     border:6px solid #d4af37;
-
 
 }
 
@@ -346,9 +369,11 @@ button:hover{
 
 
 
-/* =========================
- COUNTDOWN
-========================= */
+
+
+/* ==========================
+   COUNTDOWN
+========================== */
 
 
 .countdown{
@@ -385,7 +410,6 @@ button:hover{
 
     border:2px solid #d4af37;
 
-
     color:white;
 
 }
@@ -412,9 +436,12 @@ button:hover{
 
 
 
-/* =========================
- PREWEDDING
-========================= */
+
+
+
+/* ==========================
+   PREWEDDING
+========================== */
 
 
 .prewedding{
@@ -431,11 +458,9 @@ button:hover{
 
     width:100%;
 
-
     border:8px solid #d4af37;
 
 }
-
 
 
 
@@ -447,9 +472,11 @@ button:hover{
 
 
 
-/* =========================
- RECEPTION
-========================= */
+
+
+/* ==========================
+   RECEPTION
+========================== */
 
 
 .reception{
@@ -476,6 +503,7 @@ button:hover{
 
     margin:auto;
 
+
     padding:35px 20px;
 
 
@@ -493,9 +521,19 @@ button:hover{
 
 
 
-/* =========================
- GIFT
-========================= */
+.event-box button{
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* ==========================
+   GIFT
+========================== */
 
 
 .gift{
@@ -516,9 +554,11 @@ button:hover{
 
 
 
-/* =========================
- RSVP
-========================= */
+
+
+/* ==========================
+   RSVP
+========================== */
 
 
 .rsvp{
@@ -530,9 +570,10 @@ button:hover{
 
 
 
-/* =========================
- THANK YOU
-========================= */
+
+/* ==========================
+   THANK YOU
+========================== */
 
 
 .thank{
@@ -553,9 +594,11 @@ button:hover{
 
 
 
-/* =========================
- MOBILE
-========================= */
+
+
+/* ==========================
+   MOBILE
+========================== */
 
 
 @media(max-width:480px){
@@ -568,13 +611,18 @@ button:hover{
     }
 
 
+    .javanese-frame{
+
+        padding:35px 20px;
+
+    }
+
 
     .timer{
 
         gap:5px;
 
     }
-
 
 
     .timer div{
@@ -584,13 +632,11 @@ button:hover{
     }
 
 
-
     .timer span{
 
         font-size:24px;
 
     }
-
 
 
 }
