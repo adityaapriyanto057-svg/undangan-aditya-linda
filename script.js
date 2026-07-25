@@ -60,13 +60,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function openInvitation(){
 
-    document.querySelector(".hero")
-    .style.display="none";
+
+document.body.classList.add("opened");
 
 
-    document.querySelector(".opening")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+setTimeout(function(){
+
+
+document.querySelector(".opening")
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+},1500);
+
+
 
 }
