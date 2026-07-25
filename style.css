@@ -22,11 +22,6 @@ body{
 
 
 
-/* =========================
-SECTION
-========================= */
-
-
 section{
 
     padding:80px 25px;
@@ -37,8 +32,10 @@ section{
 
 
 
+
+
 /* =========================
-COVER PREMIUM
+COVER
 ========================= */
 
 
@@ -46,48 +43,66 @@ COVER PREMIUM
 
     min-height:100vh;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    width:100%;
 
     position:relative;
 
     overflow:hidden;
 
 
-    background-image:
+    display:flex;
 
-    linear-gradient(
-    rgba(40,0,0,.55),
-    rgba(40,0,0,.75)
-    ),
+    justify-content:center;
 
-    url("./images/Coverjawaundangan.png");
-
-
-    background-size:cover;
-
-    background-position:center;
+    align-items:center;
 
 }
 
 
 
-@keyframes zoomBackground{
+/* GAMBAR COVER FULL */
+
+
+.cover-image{
+
+
+    position:absolute;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    top:0;
+
+    left:0;
+
+
+    animation:zoomCover 15s infinite alternate;
+
+
+}
+
+
+
+
+@keyframes zoomCover{
 
 
     from{
 
-        background-size:100%;
+        transform:scale(1);
 
     }
 
 
     to{
 
-        background-size:115%;
+        transform:scale(1.12);
 
     }
 
@@ -96,7 +111,181 @@ COVER PREMIUM
 
 
 
-/* cahaya emas lembut */
+
+/* LAPISAN CAHAYA */
+
+
+.hero::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    linear-gradient(
+
+    rgba(30,0,0,.35),
+
+    rgba(30,0,0,.65)
+
+    );
+
+
+}
+
+
+
+
+
+/* POSISI FRAME */
+
+
+.cover-overlay{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+/* FRAME HITAM */
+
+
+.javanese-frame{
+
+
+    width:90%;
+
+
+    max-width:430px;
+
+
+
+    padding:45px 30px;
+
+
+
+    background:
+
+    rgba(0,0,0,.60);
+
+
+
+    border:
+
+    3px solid #d4af37;
+
+
+
+    color:white;
+
+
+
+    text-align:center;
+
+
+
+    position:relative;
+
+
+
+    box-shadow:
+
+
+    0 0 40px rgba(212,175,55,.8);
+
+
+
+    backdrop-filter:blur(4px);
+
+
+}
+
+
+
+
+
+/* FRAME EMAS */
+
+
+.javanese-frame::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:-10px;
+
+
+    border:
+
+    1px solid #d4af37;
+
+
+
+    animation:borderGlow 4s infinite alternate;
+
+
+
+}
+
+
+
+@keyframes borderGlow{
+
+
+    from{
+
+        box-shadow:0 0 5px #d4af37;
+
+    }
+
+
+    to{
+
+        box-shadow:0 0 35px #d4af37;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* CAHAYA EMAS */
 
 
 .hero::before{
@@ -111,13 +300,17 @@ COVER PREMIUM
     inset:0;
 
 
+    z-index:1;
+
+
     background:
+
 
     radial-gradient(
 
-    circle at center,
+    circle,
 
-    rgba(212,175,55,.25),
+    rgba(212,175,55,.35),
 
     transparent 45%
 
@@ -132,71 +325,26 @@ COVER PREMIUM
 
 
 
+
 @keyframes goldGlow{
 
 
     from{
 
-        opacity:.4;
+        opacity:.3;
 
     }
 
 
     to{
 
-        opacity:.9;
+        opacity:.8;
 
     }
 
 
 }
 
-
-
-
-
-
-
-.javanese-frame{
-
-    position:relative;
-
-    z-index:2;
-
-
-    width:90%;
-
-    max-width:430px;
-
-
-    padding:50px 30px;
-
-
-    background:
-
-    rgba(0,0,0,0.55);
-
-
-    border:
-
-    3px solid #d4af37;
-
-
-    color:white;
-
-
-    text-align:center;
-
-
-    box-shadow:
-
-    0 0 40px rgba(212,175,55,.6);
-
-
-    backdrop-filter:blur(3px);
-
-
-}
 
 
 
@@ -216,6 +364,7 @@ COVER PREMIUM
 
 
 }
+
 
 
 
@@ -243,6 +392,7 @@ h1{
 
 
 }
+
 
 
 
@@ -288,6 +438,7 @@ h1 span{
 
 
 
+
 .date{
 
 
@@ -304,6 +455,7 @@ h1 span{
 
 
 
+
 .guest{
 
 
@@ -311,6 +463,7 @@ h1 span{
 
 
 }
+
 
 
 
@@ -364,7 +517,6 @@ button{
 
 
 
-
 button:hover{
 
 
@@ -372,7 +524,6 @@ button:hover{
 
 
 }
-
 
 
 
@@ -405,43 +556,16 @@ OPENING
     content:"✦ ❖ ✦";
 
 
-    display:block;
-
-
     color:#d4af37;
 
 
     font-size:35px;
 
 
+    display:block;
+
+
     margin-bottom:20px;
-
-
-    animation:floatOrnament 4s infinite;
-
-
-}
-
-
-
-
-
-
-@keyframes floatOrnament{
-
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-
-    50%{
-
-        transform:translateY(-12px);
-
-    }
 
 
 }
@@ -467,7 +591,7 @@ OPENING
 
 
 /* =========================
-BRIDE & GROOM
+BRIDE GROOM
 ========================= */
 
 
@@ -478,7 +602,6 @@ BRIDE & GROOM
 
 
 }
-
 
 
 
@@ -504,7 +627,6 @@ BRIDE & GROOM
 
 
 
-
 .person{
 
 
@@ -512,7 +634,6 @@ BRIDE & GROOM
 
 
 }
-
 
 
 
@@ -552,7 +673,6 @@ BRIDE & GROOM
 
 
 
-
 .person h3{
 
 
@@ -563,7 +683,6 @@ BRIDE & GROOM
 
 
 }
-
 
 
 
@@ -602,7 +721,6 @@ COUNTDOWN
 
 
 
-
 .timer{
 
 
@@ -624,14 +742,13 @@ COUNTDOWN
 
 
 
-
 .timer div{
 
 
     width:80px;
 
 
-    padding:15px 5px;
+    padding:15px;
 
 
 
@@ -644,11 +761,11 @@ COUNTDOWN
     2px solid #d4af37;
 
 
-
     color:white;
 
 
 }
+
 
 
 
@@ -665,23 +782,6 @@ COUNTDOWN
 
 
 }
-
-
-
-
-
-
-.timer p{
-
-
-    margin:5px;
-
-
-    font-size:12px;
-
-
-}
-
 
 
 
@@ -729,20 +829,6 @@ PREWEDDING
 
 
 
-.prewedding h3{
-
-
-    color:#7b1e1e;
-
-
-}
-
-
-
-
-
-
-
 
 
 /* =========================
@@ -763,9 +849,6 @@ RECEPTION
 
 
 
-
-
-
 .reception h2{
 
 
@@ -773,7 +856,6 @@ RECEPTION
 
 
 }
-
 
 
 
@@ -791,14 +873,12 @@ RECEPTION
     padding:35px 20px;
 
 
-
     border:
 
     2px solid #d4af37;
 
 
 }
-
 
 
 
@@ -811,7 +891,6 @@ RECEPTION
 
 
 }
-
 
 
 
@@ -835,9 +914,6 @@ GIFT
 
 
 
-
-
-
 .gift h3{
 
 
@@ -848,7 +924,6 @@ GIFT
 
 
 }
-
 
 
 
@@ -896,8 +971,6 @@ THANK YOU
 
 
 
-
-
 .thank h2{
 
 
@@ -924,13 +997,9 @@ MOBILE
 
     h1{
 
-
         font-size:45px;
 
-
     }
-
-
 
 
 
@@ -944,8 +1013,6 @@ MOBILE
 
 
 
-
-
     .timer{
 
 
@@ -953,8 +1020,6 @@ MOBILE
 
 
     }
-
-
 
 
 
@@ -968,8 +1033,6 @@ MOBILE
 
 
 
-
-
     .timer span{
 
 
@@ -978,47 +1041,5 @@ MOBILE
 
     }
 
-
-}
-
-.javanese-frame::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-8px;
-
-
-    border:
-
-    1px solid rgba(212,175,55,.7);
-
-
-    z-index:-1;
-
-
-    animation:borderGlow 4s infinite alternate;
-
-
-}
-
-
-
-@keyframes borderGlow{
-
-
-    from{
-
-        box-shadow:0 0 5px #d4af37;
-
-    }
-
-
-    to{
-
-        box-shadow:0 0 25px #d4af37;
-
-    }
 
 }
