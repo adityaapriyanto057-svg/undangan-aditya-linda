@@ -159,29 +159,22 @@ COVER PREMIUM
 
 .javanese-frame{
 
-
     position:relative;
-
 
     z-index:2;
 
 
-
     width:90%;
-
 
     max-width:430px;
 
 
-
-    padding:45px 25px;
-
+    padding:50px 30px;
 
 
     background:
 
-    rgba(0,0,0,.45);
-
+    rgba(0,0,0,0.55);
 
 
     border:
@@ -189,19 +182,21 @@ COVER PREMIUM
     3px solid #d4af37;
 
 
-
     color:white;
 
+
+    text-align:center;
 
 
     box-shadow:
 
-    0 0 35px rgba(212,175,55,.55);
+    0 0 40px rgba(212,175,55,.6);
 
+
+    backdrop-filter:blur(3px);
 
 
 }
-
 
 
 
@@ -983,5 +978,47 @@ MOBILE
 
     }
 
+
+}
+
+.javanese-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-8px;
+
+
+    border:
+
+    1px solid rgba(212,175,55,.7);
+
+
+    z-index:-1;
+
+
+    animation:borderGlow 4s infinite alternate;
+
+
+}
+
+
+
+@keyframes borderGlow{
+
+
+    from{
+
+        box-shadow:0 0 5px #d4af37;
+
+    }
+
+
+    to{
+
+        box-shadow:0 0 25px #d4af37;
+
+    }
 
 }
