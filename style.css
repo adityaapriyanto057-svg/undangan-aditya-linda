@@ -1,265 +1,412 @@
-* {
-    box-sizing: border-box;
+*{
+box-sizing:border-box;
 }
 
-body {
 
-    margin:0;
-    font-family: "Georgia", serif;
-    background:#f7efe2;
-    color:#3b1d0b;
+body{
+
+margin:0;
+
+font-family:"Georgia",serif;
+
+background:#f8efdf;
+
+color:#4a210f;
 
 }
+
+
+
+section{
+
+padding:70px 25px;
+
+text-align:center;
+
+}
+
 
 
 /* COVER */
 
-.hero {
+.hero{
 
-    min-height:100vh;
+min-height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+display:flex;
 
-    text-align:center;
+justify-content:center;
 
-    background:
-    linear-gradient(
-    rgba(60,0,0,.75),
-    rgba(40,0,0,.85)
-    ),
-    url("images/cover.jpg");
+align-items:center;
 
-    background-size:cover;
-    background-position:center;
+background:
+linear-gradient(
+rgba(60,0,0,.75),
+rgba(60,0,0,.85)
+),
+url("images/cover.jpg");
 
-    position:relative;
+background-size:cover;
 
-    overflow:hidden;
+background-position:center;
 
 }
 
 
 
-.javanese-frame {
+.javanese-frame{
 
-    border:3px solid #d4af37;
+max-width:420px;
 
-    padding:45px 30px;
+width:90%;
 
-    width:85%;
-    max-width:420px;
+padding:45px 25px;
 
-    background:
-    rgba(0,0,0,.35);
+border:3px solid #d4af37;
 
-    color:white;
+background:rgba(0,0,0,.35);
 
-    border-radius:5px;
+color:white;
 
 }
 
 
 
-.small-title {
+.small-title{
 
-    letter-spacing:5px;
+letter-spacing:4px;
 
-    font-size:14px;
+font-size:14px;
 
-    color:#f5d77a;
-
-}
-
-
-
-h1 {
-
-    font-size:60px;
-
-    font-weight:normal;
-
-    line-height:1.1;
-
-    color:#f8df8b;
+color:#f5d77a;
 
 }
 
 
 
-h1 span {
+h1{
 
-    font-size:35px;
+font-size:55px;
 
-    color:white;
+font-weight:normal;
 
-}
+color:#f5d77a;
 
-
-
-.gold-line {
-
-    height:2px;
-
-    width:120px;
-
-    background:#d4af37;
-
-    margin:25px auto;
+line-height:1.1;
 
 }
 
 
 
-.date {
+h1 span{
 
-    font-size:20px;
+color:white;
 
-    line-height:1.8;
-
-}
-
-
-
-.guest {
-
-    margin-top:40px;
+font-size:35px;
 
 }
 
 
 
-button {
+.gold-line{
 
-    margin-top:30px;
+width:120px;
 
-    padding:14px 45px;
+height:2px;
 
-    border:none;
+background:#d4af37;
 
-    border-radius:40px;
-
-    background:#d4af37;
-
-    color:#3b1d0b;
-
-    font-size:16px;
-
-    cursor:pointer;
+margin:25px auto;
 
 }
 
 
+
+.date{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+
+
+button{
+
+background:#d4af37;
+
+border:none;
+
+padding:14px 45px;
+
+border-radius:50px;
+
+font-size:16px;
+
+cursor:pointer;
+
+color:#4a210f;
+
+margin-top:25px;
+
+}
 
 
 
 /* OPENING */
 
 
-.opening {
+.opening{
 
-    padding:70px 25px;
+background:#fff7e8;
 
-    text-align:center;
-
-    background:#fff8ec;
+line-height:1.8;
 
 }
-
-
-
-.opening h2 {
-
-    color:#8b5e22;
-
-}
-
-
-
-.opening p {
-
-    line-height:1.8;
-
-    max-width:600px;
-
-    margin:auto;
-
-}
-
 
 
 
 /* COUPLE */
 
 
-.couple {
+.couple h2,
+.countdown h2,
+.reception h2,
+.gift h2,
+.rsvp h2,
+.thank h2{
 
-    padding:70px 20px;
+color:#7b1e1e;
 
-    text-align:center;
-
-}
-
-
-
-.couple h2 {
-
-    color:#8b5e22;
-
-    margin-bottom:40px;
+letter-spacing:2px;
 
 }
 
 
 
-.person {
+.person{
 
-    margin-bottom:40px;
-
-}
-
-
-
-.person img {
-
-    width:180px;
-
-    height:220px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    border:5px solid #d4af37;
+margin:35px auto;
 
 }
 
 
 
-.person h3 {
+.person img{
 
-    font-size:30px;
+width:190px;
 
-    color:#7b1e1e;
+height:230px;
 
-}
+object-fit:cover;
 
+border-radius:50%;
 
-
-.person p {
-
-    line-height:1.7;
+border:5px solid #d4af37;
 
 }
 
 
 
-.heart {
+.person h3{
 
-    font-size:35px;
+font-size:30px;
 
-    margin:20px;
+color:#7b1e1e;
+
+}
+
+
+
+.heart{
+
+font-size:35px;
+
+}
+
+
+
+/* COUNTDOWN */
+
+
+.countdown{
+
+background:#fff7e8;
+
+}
+
+
+
+.timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin:35px 0;
+
+}
+
+
+
+.timer div{
+
+background:#5b1010;
+
+color:white;
+
+padding:15px;
+
+width:75px;
+
+border:2px solid #d4af37;
+
+}
+
+
+
+.timer span{
+
+font-size:28px;
+
+color:#f5d77a;
+
+}
+
+
+
+.timer p{
+
+font-size:12px;
+
+margin:5px;
+
+}
+
+
+
+
+/* PREWEDDING */
+
+
+.prewedding img{
+
+width:100%;
+
+max-width:400px;
+
+border:6px solid #d4af37;
+
+}
+
+
+
+
+.prewedding h3{
+
+color:#7b1e1e;
+
+letter-spacing:2px;
+
+}
+
+
+
+/* RECEPTION */
+
+
+.reception{
+
+background:#5b1010;
+
+color:white;
+
+}
+
+
+
+.reception h2{
+
+color:#f5d77a;
+
+}
+
+
+
+.event-box{
+
+max-width:450px;
+
+margin:auto;
+
+border:2px solid #d4af37;
+
+padding:35px 20px;
+
+}
+
+
+
+.event-box h3{
+
+color:#f5d77a;
+
+}
+
+
+
+/* GIFT */
+
+
+.gift{
+
+background:#fff7e8;
+
+}
+
+
+
+.gift h3{
+
+font-size:28px;
+
+color:#7b1e1e;
+
+}
+
+
+
+/* RSVP */
+
+
+.rsvp{
+
+background:#f2dfc2;
+
+}
+
+
+
+
+/* THANK */
+
+
+.thank{
+
+background:#5b1010;
+
+color:white;
+
+}
+
+
+
+.thank h2{
+
+color:#f5d77a;
 
 }
 
@@ -270,17 +417,25 @@ button {
 
 @media(max-width:480px){
 
+h1{
 
-h1 {
-
-    font-size:45px;
+font-size:45px;
 
 }
 
 
-.javanese-frame {
+.timer div{
 
-    padding:35px 20px;
+width:60px;
+
+padding:10px;
+
+}
+
+
+.timer{
+
+gap:6px;
 
 }
 
