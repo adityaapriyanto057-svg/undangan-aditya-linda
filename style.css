@@ -1,54 +1,115 @@
 *{
-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
 }
 
 
 body{
+    margin:0;
+    font-family:"Georgia", "Times New Roman", serif;
+    background:#f8efdf;
+    color:#4a210f;
+}
 
-margin:0;
 
-font-family:"Georgia",serif;
+/* =========================
+   CURTAIN OPENING
+========================= */
 
-background:#f8efdf;
+.curtain{
 
-color:#4a210f;
+    position:fixed;
+    top:0;
+    width:50%;
+    height:100vh;
+
+    background:
+    linear-gradient(
+    90deg,
+    #4b0000,
+    #8b1e1e
+    );
+
+    z-index:9999;
+
+    transition:2s ease-in-out;
 
 }
 
+
+.curtain.left{
+    left:0;
+}
+
+
+.curtain.right{
+    right:0;
+}
+
+
+body.opened .curtain.left{
+
+    transform:translateX(-100%);
+
+}
+
+
+body.opened .curtain.right{
+
+    transform:translateX(100%);
+
+}
+
+
+
+/* =========================
+   SECTION
+========================= */
 
 
 section{
 
-padding:70px 25px;
+    padding:80px 25px;
 
-text-align:center;
+    text-align:center;
 
 }
 
 
 
-/* COVER */
+/* =========================
+   COVER
+========================= */
+
 
 .hero{
 
-min-height:100vh;
+    min-height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    align-items:center;
 
-align-items:center;
+    justify-content:center;
 
-background:
-linear-gradient(
-rgba(60,0,0,.75),
-rgba(60,0,0,.85)
-),
-url("images/cover.jpg");
 
-background-size:cover;
+    background:
 
-background-position:center;
+    linear-gradient(
+    rgba(60,0,0,.75),
+    rgba(60,0,0,.85)
+    ),
+
+    url("images/jawa.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -56,17 +117,25 @@ background-position:center;
 
 .javanese-frame{
 
-max-width:420px;
+    width:90%;
 
-width:90%;
+    max-width:430px;
 
-padding:45px 25px;
+    padding:45px 25px;
 
-border:3px solid #d4af37;
 
-background:rgba(0,0,0,.35);
+    border:3px solid #d4af37;
 
-color:white;
+
+    background:
+    rgba(0,0,0,.45);
+
+
+    color:white;
+
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.5);
 
 }
 
@@ -74,11 +143,11 @@ color:white;
 
 .small-title{
 
-letter-spacing:4px;
+    font-size:14px;
 
-font-size:14px;
+    letter-spacing:5px;
 
-color:#f5d77a;
+    color:#f5d77a;
 
 }
 
@@ -86,13 +155,15 @@ color:#f5d77a;
 
 h1{
 
-font-size:55px;
+    font-size:60px;
 
-font-weight:normal;
+    line-height:1.1;
 
-color:#f5d77a;
+    font-weight:normal;
 
-line-height:1.1;
+    margin:25px 0;
+
+    color:#f5d77a;
 
 }
 
@@ -100,9 +171,9 @@ line-height:1.1;
 
 h1 span{
 
-color:white;
+    color:white;
 
-font-size:35px;
+    font-size:35px;
 
 }
 
@@ -110,13 +181,13 @@ font-size:35px;
 
 .gold-line{
 
-width:120px;
+    width:120px;
 
-height:2px;
+    height:2px;
 
-background:#d4af37;
+    background:#d4af37;
 
-margin:25px auto;
+    margin:25px auto;
 
 }
 
@@ -124,50 +195,94 @@ margin:25px auto;
 
 .date{
 
-font-size:20px;
+    font-size:20px;
 
-line-height:1.8;
+    line-height:1.8;
 
 }
+
+
+
+.guest{
+
+    margin-top:35px;
+
+}
+
 
 
 
 button{
 
-background:#d4af37;
+    margin-top:25px;
 
-border:none;
+    padding:14px 45px;
 
-padding:14px 45px;
 
-border-radius:50px;
+    border:none;
 
-font-size:16px;
+    border-radius:50px;
 
-cursor:pointer;
 
-color:#4a210f;
+    background:#d4af37;
 
-margin-top:25px;
+
+    color:#4a210f;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
 
 }
 
 
 
-/* OPENING */
+/* =========================
+ OPENING
+========================= */
 
 
 .opening{
 
-background:#fff7e8;
+    background:#fff8eb;
 
-line-height:1.8;
+    line-height:1.8;
 
 }
 
 
 
-/* COUPLE */
+.opening h2{
+
+    color:#7b1e1e;
+
+}
+
+
+
+/* =========================
+ BRIDE GROOM
+========================= */
+
+
+.couple{
+
+    background:#f8efdf;
+
+}
+
 
 
 .couple h2,
@@ -177,9 +292,9 @@ line-height:1.8;
 .rsvp h2,
 .thank h2{
 
-color:#7b1e1e;
+    color:#7b1e1e;
 
-letter-spacing:2px;
+    letter-spacing:3px;
 
 }
 
@@ -187,7 +302,7 @@ letter-spacing:2px;
 
 .person{
 
-margin:35px auto;
+    margin:40px auto;
 
 }
 
@@ -195,15 +310,19 @@ margin:35px auto;
 
 .person img{
 
-width:190px;
+    width:200px;
 
-height:230px;
+    height:240px;
 
-object-fit:cover;
 
-border-radius:50%;
+    object-fit:cover;
 
-border:5px solid #d4af37;
+
+    border-radius:50%;
+
+
+    border:6px solid #d4af37;
+
 
 }
 
@@ -211,9 +330,9 @@ border:5px solid #d4af37;
 
 .person h3{
 
-font-size:30px;
+    font-size:32px;
 
-color:#7b1e1e;
+    color:#7b1e1e;
 
 }
 
@@ -221,18 +340,20 @@ color:#7b1e1e;
 
 .heart{
 
-font-size:35px;
+    font-size:40px;
 
 }
 
 
 
-/* COUNTDOWN */
+/* =========================
+ COUNTDOWN
+========================= */
 
 
 .countdown{
 
-background:#fff7e8;
+    background:#fff8eb;
 
 }
 
@@ -240,13 +361,13 @@ background:#fff7e8;
 
 .timer{
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-gap:12px;
+    gap:15px;
 
-margin:35px 0;
+    margin:40px auto;
 
 }
 
@@ -254,15 +375,18 @@ margin:35px 0;
 
 .timer div{
 
-background:#5b1010;
+    width:80px;
 
-color:white;
+    padding:15px 5px;
 
-padding:15px;
 
-width:75px;
+    background:#5b1010;
 
-border:2px solid #d4af37;
+
+    border:2px solid #d4af37;
+
+
+    color:white;
 
 }
 
@@ -270,9 +394,9 @@ border:2px solid #d4af37;
 
 .timer span{
 
-font-size:28px;
+    font-size:30px;
 
-color:#f5d77a;
+    color:#f5d77a;
 
 }
 
@@ -280,25 +404,35 @@ color:#f5d77a;
 
 .timer p{
 
-font-size:12px;
+    margin:5px;
 
-margin:5px;
+    font-size:12px;
 
 }
 
 
 
+/* =========================
+ PREWEDDING
+========================= */
 
-/* PREWEDDING */
+
+.prewedding{
+
+    max-width:450px;
+
+    margin:auto;
+
+}
+
 
 
 .prewedding img{
 
-width:100%;
+    width:100%;
 
-max-width:400px;
 
-border:6px solid #d4af37;
+    border:8px solid #d4af37;
 
 }
 
@@ -307,22 +441,22 @@ border:6px solid #d4af37;
 
 .prewedding h3{
 
-color:#7b1e1e;
-
-letter-spacing:2px;
+    color:#7b1e1e;
 
 }
 
 
 
-/* RECEPTION */
+/* =========================
+ RECEPTION
+========================= */
 
 
 .reception{
 
-background:#5b1010;
+    background:#5b1010;
 
-color:white;
+    color:white;
 
 }
 
@@ -330,7 +464,7 @@ color:white;
 
 .reception h2{
 
-color:#f5d77a;
+    color:#f5d77a;
 
 }
 
@@ -338,13 +472,14 @@ color:#f5d77a;
 
 .event-box{
 
-max-width:450px;
+    max-width:450px;
 
-margin:auto;
+    margin:auto;
 
-border:2px solid #d4af37;
+    padding:35px 20px;
 
-padding:35px 20px;
+
+    border:2px solid #d4af37;
 
 }
 
@@ -352,18 +487,20 @@ padding:35px 20px;
 
 .event-box h3{
 
-color:#f5d77a;
+    color:#f5d77a;
 
 }
 
 
 
-/* GIFT */
+/* =========================
+ GIFT
+========================= */
 
 
 .gift{
 
-background:#fff7e8;
+    background:#fff8eb;
 
 }
 
@@ -371,34 +508,38 @@ background:#fff7e8;
 
 .gift h3{
 
-font-size:28px;
+    font-size:30px;
 
-color:#7b1e1e;
+    color:#7b1e1e;
 
 }
 
 
 
-/* RSVP */
+/* =========================
+ RSVP
+========================= */
 
 
 .rsvp{
 
-background:#f2dfc2;
+    background:#ead5ad;
 
 }
 
 
 
 
-/* THANK */
+/* =========================
+ THANK YOU
+========================= */
 
 
 .thank{
 
-background:#5b1010;
+    background:#5b1010;
 
-color:white;
+    color:white;
 
 }
 
@@ -406,118 +547,50 @@ color:white;
 
 .thank h2{
 
-color:#f5d77a;
+    color:#f5d77a;
 
 }
 
 
 
-/* MOBILE */
+/* =========================
+ MOBILE
+========================= */
 
 
 @media(max-width:480px){
 
-h1{
 
-font-size:45px;
+    h1{
 
-}
+        font-size:45px;
 
-
-.timer div{
-
-width:60px;
-
-padding:10px;
-
-}
-
-
-.timer{
-
-gap:6px;
-
-}
-
-
-}
-/* CURTAIN OPENING */
-
-.curtain{
-
-position:fixed;
-
-top:0;
-
-width:50%;
-
-height:100vh;
-
-background:#5b1010;
-
-z-index:10;
-
-transition:2s ease;
-
-}
+    }
 
 
 
-.curtain.left{
+    .timer{
 
-left:0;
+        gap:5px;
 
-}
-
-
-
-.curtain.right{
-
-right:0;
-
-}
+    }
 
 
 
-.opened .curtain.left{
+    .timer div{
 
-transform:translateX(-100%);
+        width:65px;
 
-}
-
-
-
-.opened .curtain.right{
-
-transform:translateX(100%);
-
-}
+    }
 
 
 
-/* ANIMATION HERO */
+    .timer span{
+
+        font-size:24px;
+
+    }
 
 
-.hero{
-
-animation:fadeIn 2s ease;
-
-}
-
-
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
 
 }
