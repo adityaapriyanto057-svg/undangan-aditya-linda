@@ -22,83 +22,6 @@ body{
 
 
 
-/* =========================
-   CURTAIN OPENING
-========================= */
-
-
-.curtain{
-
-    position:fixed;
-
-    top:0;
-
-    width:50%;
-
-    height:100vh;
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #430000,
-    #8b1e1e
-    );
-
-
-    z-index:10;
-
-
-    transition:2s ease-in-out;
-
-
-}
-
-
-
-.curtain.left{
-
-    left:0;
-
-}
-
-
-
-.curtain.right{
-
-    right:0;
-
-}
-
-
-
-body.opened .curtain.left{
-
-    transform:translateX(-100%);
-
-}
-
-
-
-body.opened .curtain.right{
-
-    transform:translateX(100%);
-
-}
-
-
-
-body.opened .curtain{
-
-    pointer-events:none;
-
-}
-
-
-
-
-
 
 
 /* =========================
@@ -118,12 +41,16 @@ section{
 
 
 
+
+
+
 /* =========================
    COVER
 ========================= */
 
 
 .hero{
+
 
     min-height:100vh;
 
@@ -138,13 +65,26 @@ section{
 
 
 
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+
     background:
 
 
+
     linear-gradient(
-    rgba(50,0,0,.75),
+
+    rgba(50,0,0,.65),
+
     rgba(50,0,0,.85)
+
     ),
+
 
 
     url("images/jawa.jpg");
@@ -157,7 +97,86 @@ section{
     background-position:center;
 
 
+
 }
+
+
+
+
+
+/* efek cahaya bergerak */
+
+
+.hero::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+
+    width:350px;
+
+
+    height:350px;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    rgba(212,175,55,.45),
+
+    transparent
+
+    );
+
+
+
+
+    animation:
+
+
+    lightMove 6s infinite alternate;
+
+
+
+}
+
+
+
+
+@keyframes lightMove{
+
+
+    from{
+
+
+        transform:translate(-120px,-80px);
+
+
+    }
+
+
+
+    to{
+
+
+        transform:translate(120px,80px);
+
+
+    }
+
+
+}
+
+
 
 
 
@@ -169,7 +188,7 @@ section{
     position:relative;
 
 
-    z-index:20;
+    z-index:2;
 
 
 
@@ -184,11 +203,15 @@ section{
 
 
 
-    border:3px solid #d4af37;
+    border:
+
+
+    3px solid #d4af37;
 
 
 
     background:
+
 
     rgba(0,0,0,.45);
 
@@ -198,14 +221,16 @@ section{
 
 
 
+
     box-shadow:
 
 
-    0 0 30px rgba(212,175,55,.5);
+    0 0 35px rgba(212,175,55,.5);
 
 
 
 }
+
 
 
 
@@ -226,6 +251,7 @@ section{
 
 
 }
+
 
 
 
@@ -272,6 +298,9 @@ h1 span{
 
 
 
+
+
+
 .gold-line{
 
 
@@ -294,6 +323,8 @@ h1 span{
 
 
 
+
+
 .date{
 
 
@@ -304,6 +335,8 @@ h1 span{
 
 
 }
+
+
 
 
 
@@ -339,7 +372,18 @@ button{
 
 
 
-    background:#d4af37;
+    background:
+
+
+    linear-gradient(
+
+    45deg,
+
+    #d4af37,
+
+    #f5d77a
+
+    );
 
 
 
@@ -348,6 +392,10 @@ button{
 
 
     font-size:16px;
+
+
+
+    font-weight:bold;
 
 
 
@@ -364,13 +412,16 @@ button{
 
 
 
+
 button:hover{
 
 
-    transform:scale(1.05);
+    transform:scale(1.08);
 
 
 }
+
+
 
 
 
@@ -380,20 +431,40 @@ button:hover{
 
 
 /* =========================
- OPENING
+   OPENING
 ========================= */
 
 
 .opening{
 
 
-    background:#fff8eb;
+    background:
+
+
+    linear-gradient(
+
+    rgba(255,248,235,.9),
+
+    rgba(255,248,235,.95)
+
+    ),
+
+
+    url("images/jawa.jpg");
+
+
+
+    background-size:cover;
+
 
 
     line-height:1.8;
 
 
+
 }
+
+
 
 
 
@@ -411,9 +482,12 @@ button:hover{
 
 
 
+
+
 /* =========================
- BRIDE GROOM
+   COUPLE
 ========================= */
+
 
 
 .couple{
@@ -423,6 +497,9 @@ button:hover{
 
 
 }
+
+
+
 
 
 
@@ -447,6 +524,7 @@ button:hover{
 
 
 
+
 .person{
 
 
@@ -454,6 +532,8 @@ button:hover{
 
 
 }
+
+
 
 
 
@@ -480,7 +560,16 @@ button:hover{
 
 
 
+    box-shadow:
+
+    0 0 20px rgba(0,0,0,.25);
+
+
+
 }
+
+
+
 
 
 
@@ -495,6 +584,7 @@ button:hover{
 
 
 }
+
 
 
 
@@ -517,8 +607,9 @@ button:hover{
 
 
 /* =========================
- COUNTDOWN
+   COUNTDOWN
 ========================= */
+
 
 
 .countdown{
@@ -528,6 +619,7 @@ button:hover{
 
 
 }
+
 
 
 
@@ -553,6 +645,8 @@ button:hover{
 
 
 }
+
+
 
 
 
@@ -587,6 +681,8 @@ button:hover{
 
 
 
+
+
 .timer span{
 
 
@@ -599,6 +695,9 @@ button:hover{
 
 
 }
+
+
+
 
 
 
@@ -621,8 +720,9 @@ button:hover{
 
 
 
+
 /* =========================
- PREWEDDING
+   PREWEDDING
 ========================= */
 
 
@@ -636,6 +736,7 @@ button:hover{
 
 
 }
+
 
 
 
@@ -658,6 +759,8 @@ button:hover{
 
 
 
+
+
 .prewedding h3{
 
 
@@ -672,8 +775,10 @@ button:hover{
 
 
 
+
+
 /* =========================
- RECEPTION
+   RECEPTION
 ========================= */
 
 
@@ -693,14 +798,16 @@ button:hover{
 
 
 
+
 .reception h2{
 
 
     color:#f5d77a;
 
 
-
 }
+
+
 
 
 
@@ -730,6 +837,8 @@ button:hover{
 
 
 
+
+
 .event-box h3{
 
 
@@ -745,8 +854,9 @@ button:hover{
 
 
 
+
 /* =========================
- GIFT
+   GIFT
 ========================= */
 
 
@@ -762,6 +872,8 @@ button:hover{
 
 
 
+
+
 .gift h3{
 
 
@@ -771,7 +883,6 @@ button:hover{
     color:#7b1e1e;
 
 
-
 }
 
 
@@ -779,8 +890,11 @@ button:hover{
 
 
 
+
+
+
 /* =========================
- RSVP
+   RSVP
 ========================= */
 
 
@@ -798,8 +912,10 @@ button:hover{
 
 
 
+
+
 /* =========================
- THANK YOU
+   THANK YOU
 ========================= */
 
 
@@ -818,6 +934,9 @@ button:hover{
 
 
 
+
+
+
 .thank h2{
 
 
@@ -832,12 +951,15 @@ button:hover{
 
 
 
+
+
 /* =========================
- MOBILE
+   MOBILE
 ========================= */
 
 
 @media(max-width:480px){
+
 
 
     h1{
@@ -847,6 +969,8 @@ button:hover{
 
 
     }
+
+
 
 
 
@@ -860,6 +984,8 @@ button:hover{
 
 
 
+
+
     .timer{
 
 
@@ -867,6 +993,8 @@ button:hover{
 
 
     }
+
+
 
 
 
@@ -881,6 +1009,7 @@ button:hover{
 
 
 
+
     .timer span{
 
 
@@ -888,6 +1017,7 @@ button:hover{
 
 
     }
+
 
 
 }
