@@ -21,9 +21,6 @@ body{
 }
 
 
-
-
-
 /* =========================
 SECTION
 ========================= */
@@ -39,11 +36,6 @@ section{
 
 
 
-
-
-
-
-
 /* =========================
 COVER
 ========================= */
@@ -53,7 +45,6 @@ COVER
 
     min-height:100vh;
 
-
     display:flex;
 
     justify-content:center;
@@ -61,11 +52,9 @@ COVER
     align-items:center;
 
 
-
     position:relative;
 
     overflow:hidden;
-
 
 
     background:
@@ -73,9 +62,9 @@ COVER
 
     linear-gradient(
 
-    rgba(50,0,0,.65),
+    rgba(40,0,0,.65),
 
-    rgba(50,0,0,.85)
+    rgba(40,0,0,.85)
 
     ),
 
@@ -83,9 +72,7 @@ COVER
     url("images/jawa.jpg");
 
 
-
     background-size:cover;
-
 
     background-position:center;
 
@@ -93,9 +80,7 @@ COVER
 }
 
 
-
-
-/* cahaya emas bergerak */
+/* cahaya emas lembut */
 
 
 .hero::before{
@@ -107,10 +92,7 @@ COVER
     position:absolute;
 
 
-    width:350px;
-
-
-    height:350px;
+    inset:0;
 
 
 
@@ -119,11 +101,11 @@ COVER
 
     radial-gradient(
 
-    circle,
+    circle at center,
 
-    rgba(212,175,55,.45),
+    rgba(212,175,55,.25),
 
-    transparent
+    transparent 45%
 
     );
 
@@ -131,34 +113,31 @@ COVER
 
     animation:
 
-    glowMove 6s infinite alternate;
+    goldGlow 8s infinite alternate;
 
 
 }
 
 
 
-
-@keyframes glowMove{
+@keyframes goldGlow{
 
 
     from{
 
-        transform:translate(-120px,-80px);
+        opacity:.4;
 
     }
 
 
     to{
 
-        transform:translate(120px,80px);
+        opacity:.9;
 
     }
 
 
 }
-
-
 
 
 
@@ -169,13 +148,11 @@ COVER
 
     position:relative;
 
-
     z-index:2;
 
 
 
     width:90%;
-
 
     max-width:430px;
 
@@ -203,15 +180,11 @@ COVER
 
     box-shadow:
 
-
-    0 0 35px rgba(212,175,55,.5);
+    0 0 35px rgba(212,175,55,.45);
 
 
 
 }
-
-
-
 
 
 
@@ -221,16 +194,12 @@ COVER
 
     font-size:14px;
 
-
     letter-spacing:5px;
-
 
     color:#f5d77a;
 
 
 }
-
-
 
 
 
@@ -257,6 +226,7 @@ h1{
 
 
 }
+
 
 
 
@@ -290,12 +260,10 @@ h1 span{
     background:#d4af37;
 
 
-
     margin:25px auto;
 
 
 }
-
 
 
 
@@ -318,7 +286,6 @@ h1 span{
 
 
 
-
 .guest{
 
 
@@ -326,8 +293,6 @@ h1 span{
 
 
 }
-
-
 
 
 
@@ -351,18 +316,7 @@ button{
 
 
 
-    background:
-
-
-    linear-gradient(
-
-    45deg,
-
-    #d4af37,
-
-    #f5d77a
-
-    );
+    background:#d4af37;
 
 
 
@@ -386,7 +340,6 @@ button{
 
 
 }
-
 
 
 
@@ -415,108 +368,59 @@ OPENING
 .opening{
 
 
-    background:
-
-
-    linear-gradient(
-
-    rgba(255,248,235,.92),
-
-    rgba(255,248,235,.98)
-
-    ),
-
-
-    url("images/jawa.jpg");
-
-
-
-    background-size:cover;
-
-
-    background-position:center;
-
+    background:#fff8eb;
 
 
     line-height:1.8;
 
 
-
     position:relative;
 
 
-    overflow:hidden;
-
-
 }
-
-
 
 
 
 .opening::before{
 
 
-    content:"✦  ❖  ✦";
-
+    content:"✦ ❖ ✦";
 
 
     display:block;
 
 
+    color:#d4af37;
+
 
     font-size:35px;
 
 
-
-    color:#d4af37;
-
-
-
-    margin-bottom:25px;
-
+    margin-bottom:20px;
 
 
     animation:
 
-    floating 4s infinite ease-in-out;
-
+    floatOrnament 4s infinite;
 
 
 }
 
 
 
+@keyframes floatOrnament{
 
 
-@keyframes floating{
-
-
-    0%{
+    0%,100%{
 
         transform:translateY(0);
 
-        opacity:.7;
-
     }
-
 
 
     50%{
 
-        transform:translateY(-15px);
-
-        opacity:1;
-
-    }
-
-
-
-    100%{
-
-        transform:translateY(0);
-
-        opacity:.7;
+        transform:translateY(-12px);
 
     }
 
@@ -559,7 +463,6 @@ BRIDE GROOM
 
 
 
-
 .couple h2,
 .countdown h2,
 .reception h2,
@@ -580,7 +483,6 @@ BRIDE GROOM
 
 
 
-
 .person{
 
 
@@ -588,7 +490,6 @@ BRIDE GROOM
 
 
 }
-
 
 
 
@@ -603,9 +504,7 @@ BRIDE GROOM
     height:240px;
 
 
-
     object-fit:cover;
-
 
 
     border-radius:50%;
@@ -620,11 +519,10 @@ BRIDE GROOM
 
     box-shadow:
 
-    0 0 20px rgba(0,0,0,.25);
+    0 0 20px rgba(0,0,0,.2);
 
 
 }
-
 
 
 
@@ -641,8 +539,6 @@ BRIDE GROOM
 
 
 }
-
-
 
 
 
@@ -680,8 +576,6 @@ COUNTDOWN
 
 
 
-
-
 .timer{
 
 
@@ -694,7 +588,6 @@ COUNTDOWN
     gap:15px;
 
 
-
     margin:40px auto;
 
 
@@ -703,14 +596,10 @@ COUNTDOWN
 
 
 
-
-
-
 .timer div{
 
 
     width:80px;
-
 
 
     padding:15px 5px;
@@ -730,10 +619,7 @@ COUNTDOWN
     color:white;
 
 
-
 }
-
-
 
 
 
@@ -745,12 +631,10 @@ COUNTDOWN
     font-size:30px;
 
 
-
     color:#f5d77a;
 
 
 }
-
 
 
 
@@ -795,19 +679,15 @@ PREWEDDING
 
 
 
-
-
 .prewedding img{
 
 
     width:100%;
 
 
-
     border:
 
     8px solid #d4af37;
-
 
 
 }
@@ -866,8 +746,6 @@ RECEPTION
 
 
 
-
-
 .event-box{
 
 
@@ -875,7 +753,6 @@ RECEPTION
 
 
     margin:auto;
-
 
 
     padding:35px 20px;
@@ -887,10 +764,7 @@ RECEPTION
     2px solid #d4af37;
 
 
-
 }
-
-
 
 
 
@@ -924,7 +798,6 @@ GIFT
 
 
 }
-
 
 
 
@@ -988,7 +861,6 @@ THANK YOU
 
 
 
-
 .thank h2{
 
 
@@ -1015,39 +887,54 @@ MOBILE
 
     h1{
 
+
         font-size:45px;
 
+
     }
+
 
 
 
     .javanese-frame{
 
+
         padding:35px 20px;
 
+
     }
+
 
 
 
     .timer{
 
+
         gap:5px;
 
+
     }
+
+
 
 
 
     .timer div{
 
+
         width:65px;
+
 
     }
 
 
 
+
     .timer span{
 
+
         font-size:24px;
+
 
     }
 
