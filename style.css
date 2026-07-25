@@ -22,9 +22,9 @@ body{
 
 
 
-/* ==========================
+/* =========================
    CURTAIN OPENING
-========================== */
+========================= */
 
 
 .curtain{
@@ -37,16 +37,21 @@ body{
 
     height:100vh;
 
+
     background:
+
     linear-gradient(
     90deg,
-    #4b0000,
+    #430000,
     #8b1e1e
     );
 
-    z-index:9999;
+
+    z-index:10;
+
 
     transition:2s ease-in-out;
+
 
 }
 
@@ -84,11 +89,21 @@ body.opened .curtain.right{
 
 
 
+body.opened .curtain{
+
+    pointer-events:none;
+
+}
 
 
-/* ==========================
+
+
+
+
+
+/* =========================
    SECTION
-========================== */
+========================= */
 
 
 section{
@@ -103,51 +118,74 @@ section{
 
 
 
-/* ==========================
+/* =========================
    COVER
-========================== */
+========================= */
 
 
 .hero{
 
     min-height:100vh;
 
+
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
 
+
     background:
 
+
     linear-gradient(
-    rgba(60,0,0,.75),
-    rgba(60,0,0,.85)
+    rgba(50,0,0,.75),
+    rgba(50,0,0,.85)
     ),
+
 
     url("images/jawa.jpg");
 
 
+
     background-size:cover;
 
+
     background-position:center;
+
 
 }
 
 
 
+
+
 .javanese-frame{
+
+
+    position:relative;
+
+
+    z-index:20;
+
+
 
     width:90%;
 
+
     max-width:430px;
+
 
 
     padding:45px 25px;
 
 
+
     border:3px solid #d4af37;
+
 
 
     background:
@@ -155,14 +193,21 @@ section{
     rgba(0,0,0,.45);
 
 
+
     color:white;
+
 
 
     box-shadow:
 
+
     0 0 30px rgba(212,175,55,.5);
 
+
+
 }
+
+
 
 
 
@@ -170,27 +215,43 @@ section{
 
 .small-title{
 
+
     font-size:14px;
+
 
     letter-spacing:5px;
 
+
     color:#f5d77a;
+
 
 }
 
 
 
+
+
+
 h1{
+
 
     font-size:60px;
 
+
     line-height:1.1;
+
 
     font-weight:normal;
 
+
+
     margin:25px 0;
 
+
+
     color:#f5d77a;
+
+
 
 }
 
@@ -198,74 +259,116 @@ h1{
 
 h1 span{
 
+
     font-size:35px;
+
 
     color:white;
 
+
 }
+
+
 
 
 
 .gold-line{
 
+
     width:120px;
+
 
     height:2px;
 
+
     background:#d4af37;
+
+
 
     margin:25px auto;
 
+
 }
+
+
 
 
 
 .date{
 
+
     font-size:20px;
+
 
     line-height:1.8;
 
+
 }
+
 
 
 
 .guest{
 
+
     margin-top:35px;
 
+
 }
+
+
 
 
 
 
 button{
 
+
     margin-top:25px;
+
 
     padding:14px 45px;
 
+
+
     border:none;
+
+
 
     border-radius:50px;
 
+
+
     background:#d4af37;
+
+
 
     color:#4a210f;
 
+
+
     font-size:16px;
+
+
 
     cursor:pointer;
 
+
+
     transition:.3s;
 
+
+
 }
+
 
 
 
 button:hover{
 
+
     transform:scale(1.05);
+
 
 }
 
@@ -273,16 +376,22 @@ button:hover{
 
 
 
-/* ==========================
-   OPENING
-========================== */
+
+
+
+/* =========================
+ OPENING
+========================= */
 
 
 .opening{
 
+
     background:#fff8eb;
 
+
     line-height:1.8;
+
 
 }
 
@@ -290,7 +399,9 @@ button:hover{
 
 .opening h2{
 
+
     color:#7b1e1e;
+
 
 }
 
@@ -298,14 +409,18 @@ button:hover{
 
 
 
-/* ==========================
-   COUPLE
-========================== */
+
+
+/* =========================
+ BRIDE GROOM
+========================= */
 
 
 .couple{
 
+
     background:#f8efdf;
+
 
 }
 
@@ -318,52 +433,78 @@ button:hover{
 .rsvp h2,
 .thank h2{
 
+
     color:#7b1e1e;
+
 
     letter-spacing:3px;
 
+
 }
+
+
+
 
 
 
 .person{
 
+
     margin:40px auto;
 
+
 }
+
 
 
 
 .person img{
 
+
     width:200px;
+
 
     height:240px;
 
+
+
     object-fit:cover;
+
+
 
     border-radius:50%;
 
 
+
     border:6px solid #d4af37;
 
+
+
 }
+
 
 
 
 .person h3{
 
+
     font-size:32px;
+
 
     color:#7b1e1e;
 
+
 }
+
+
 
 
 
 .heart{
 
+
     font-size:40px;
+
 
 }
 
@@ -371,66 +512,105 @@ button:hover{
 
 
 
-/* ==========================
-   COUNTDOWN
-========================== */
+
+
+
+
+/* =========================
+ COUNTDOWN
+========================= */
 
 
 .countdown{
 
+
     background:#fff8eb;
 
+
 }
+
+
 
 
 
 .timer{
 
+
     display:flex;
+
+
 
     justify-content:center;
 
+
+
     gap:15px;
+
+
 
     margin:40px auto;
 
+
+
 }
+
+
 
 
 
 .timer div{
 
+
     width:80px;
 
+
+
     padding:15px 5px;
+
 
 
     background:#5b1010;
 
 
+
     border:2px solid #d4af37;
+
+
 
     color:white;
 
+
+
 }
+
+
 
 
 
 .timer span{
 
+
     font-size:30px;
+
+
 
     color:#f5d77a;
 
+
+
 }
+
 
 
 
 .timer p{
 
+
     margin:5px;
 
+
     font-size:12px;
+
 
 }
 
@@ -439,34 +619,50 @@ button:hover{
 
 
 
-/* ==========================
-   PREWEDDING
-========================== */
+
+
+/* =========================
+ PREWEDDING
+========================= */
 
 
 .prewedding{
 
+
     max-width:450px;
+
 
     margin:auto;
 
+
 }
+
+
 
 
 
 .prewedding img{
 
+
     width:100%;
+
+
 
     border:8px solid #d4af37;
 
+
+
 }
+
+
 
 
 
 .prewedding h3{
 
+
     color:#7b1e1e;
+
 
 }
 
@@ -474,56 +670,71 @@ button:hover{
 
 
 
-/* ==========================
-   RECEPTION
-========================== */
+
+
+/* =========================
+ RECEPTION
+========================= */
 
 
 .reception{
 
+
     background:#5b1010;
+
+
 
     color:white;
 
+
+
 }
+
 
 
 
 .reception h2{
 
+
     color:#f5d77a;
 
+
+
 }
+
+
 
 
 
 .event-box{
 
+
     max-width:450px;
 
+
     margin:auto;
+
 
 
     padding:35px 20px;
 
 
+
     border:2px solid #d4af37;
 
+
+
 }
+
+
 
 
 
 .event-box h3{
 
+
     color:#f5d77a;
 
-}
-
-
-
-.event-box button{
-
-    font-weight:bold;
 
 }
 
@@ -531,24 +742,35 @@ button:hover{
 
 
 
-/* ==========================
-   GIFT
-========================== */
+
+
+
+/* =========================
+ GIFT
+========================= */
 
 
 .gift{
 
+
     background:#fff8eb;
 
+
 }
+
+
 
 
 
 .gift h3{
 
+
     font-size:30px;
 
+
     color:#7b1e1e;
+
+
 
 }
 
@@ -556,14 +778,17 @@ button:hover{
 
 
 
-/* ==========================
-   RSVP
-========================== */
+
+/* =========================
+ RSVP
+========================= */
 
 
 .rsvp{
 
+
     background:#ead5ad;
+
 
 }
 
@@ -571,24 +796,33 @@ button:hover{
 
 
 
-/* ==========================
-   THANK YOU
-========================== */
+
+
+/* =========================
+ THANK YOU
+========================= */
 
 
 .thank{
 
+
     background:#5b1010;
+
 
     color:white;
 
+
+
 }
+
 
 
 
 .thank h2{
 
+
     color:#f5d77a;
+
 
 }
 
@@ -596,9 +830,11 @@ button:hover{
 
 
 
-/* ==========================
-   MOBILE
-========================== */
+
+
+/* =========================
+ MOBILE
+========================= */
 
 
 @media(max-width:480px){
@@ -606,35 +842,50 @@ button:hover{
 
     h1{
 
+
         font-size:45px;
 
+
     }
+
 
 
     .javanese-frame{
 
+
         padding:35px 20px;
 
+
     }
+
 
 
     .timer{
 
+
         gap:5px;
 
+
     }
+
 
 
     .timer div{
 
+
         width:65px;
+
 
     }
 
 
+
+
     .timer span{
 
+
         font-size:24px;
+
 
     }
 
