@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+}
+
+
+/* COVER */
+
+.cover {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        rgba(5,20,45,0.85),
+        rgba(5,20,45,0.95)
+    );
+
+    padding: 30px;
+
+}
+
+
+.content {
+
+    max-width: 450px;
+
+}
+
+
+/* JUDUL */
+
+.title {
+
+    letter-spacing: 5px;
+
+    font-size: 14px;
+
+    color: #d4af37;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* NAMA */
+
+h1 {
+
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin: 0;
+
+    color: #f5d77a;
+
+    font-weight: normal;
+
+}
+
+
+h1 span {
+
+    font-size: 35px;
+
+    color:white;
+
+}
+
+
+/* TANGGAL */
+
+.date {
+
+    margin-top: 40px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+}
+
+
+.date strong {
+
+    color:#d4af37;
+
+}
+
+
+/* TOMBOL */
+
+button {
+
+    margin-top: 40px;
+
+    padding: 15px 45px;
+
+    border-radius: 50px;
+
+    border:none;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+/* ORNAMEN */
+
+.ornament {
+
+    color:#d4af37;
+
+    font-size:30px;
+
+    margin:30px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+    h1 {
+
+        font-size:50px;
+
+    }
+
+
+    .title {
+
+        font-size:12px;
+
+    }
+
+}
