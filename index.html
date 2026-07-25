@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Wedding of Aditya & Linda</title>
+<title>The Wedding Of Aditya & Linda</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
 
-<section class="cover">
+<!-- COVER -->
 
-<div class="ornament">
-✦ ❖ ✦
-</div>
+<div class="curtain left"></div>
+<div class="curtain right"></div>
 
 
-<div class="content">
+<section class="hero">
 
-<p class="title">
-THE WEDDING RECEPTION
+
+<div class="javanese-frame">
+
+
+<p class="small-title">
+THE WEDDING OF
 </p>
 
 
-<h1>
+<h1 id="coupleName">
 Aditya
 <br>
 <span>&</span>
@@ -36,27 +42,129 @@ Linda
 </h1>
 
 
-<p class="date">
+<div class="gold-line"></div>
+
+
+<p class="date" id="eventDate">
 Rabu<br>
-<strong>05 Agustus 2026</strong>
+05 Agustus 2026
 </p>
 
 
-<button>
-Buka Undangan
+<p class="guest">
+Dear,<br>
+<span id="guestName">
+Bapak/Ibu/Saudara/i
+</span>
+</p>
+
+
+<button onclick="openInvitation()">
+OPEN
 </button>
 
 
 </div>
 
 
-<div class="ornament">
-✦ ❖ ✦
-</div>
+</section>
+
+
+
+
+<!-- OPENING -->
+
+
+<section class="opening">
+
+
+<h2>
+Assalamu'alaikum Wr. Wb.
+</h2>
+
+
+<p>
+Dengan penuh rasa syukur dan bahagia,
+kami mengundang Bapak/Ibu/Saudara/i
+untuk hadir dalam acara pernikahan kami.
+</p>
 
 
 </section>
 
 
+
+
+<!-- BRIDE GROOM -->
+
+
+<section class="couple">
+
+
+<h2>
+Bride & Groom
+</h2>
+
+
+
+<div class="person">
+
+
+<img id="groomPhoto" src="images/pria.jpg">
+
+
+<h3 id="groomName">
+Aditya
+</h3>
+
+
+<p id="groomParents">
+Putra dari Bapak Adi Rahman & Ibu Nurhasanah
+</p>
+
+
+</div>
+
+
+
+
+<div class="heart">
+❤️
+</div>
+
+
+
+
+<div class="person">
+
+
+<img id="bridePhoto" src="images/wanita.jpg">
+
+
+<h3 id="brideName">
+Linda
+</h3>
+
+
+<p id="brideParents">
+Putri dari Bapak Ali & Ibu Atmani
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<script src="config.js"></script>
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
