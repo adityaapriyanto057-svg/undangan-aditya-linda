@@ -1,14 +1,72 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    const button = document.querySelector("button");
+
+    // DATA PENGANTIN
+
+    document.getElementById("groomName").innerHTML =
+    wedding.groom.name;
 
 
-    button.addEventListener("click", function(){
+    document.getElementById("groomParents").innerHTML =
+    wedding.groom.parents;
 
-        alert("Selamat datang di Undangan Pernikahan Aditya & Linda ❤️");
 
 
-    });
+    document.getElementById("brideName").innerHTML =
+    wedding.bride.name;
+
+
+    document.getElementById("brideParents").innerHTML =
+    wedding.bride.parents;
+
+
+
+    // COVER
+
+    document.getElementById("coupleName").innerHTML =
+    wedding.groom.name +
+    "<br><span>&</span><br>" +
+    wedding.bride.name;
+
+
+
+    document.getElementById("eventDate").innerHTML =
+    wedding.event.date;
+
+
+
+    document.getElementById("guestName").innerHTML =
+    wedding.guest;
+
+
+
+    // FOTO
+
+    document.getElementById("groomPhoto").src =
+    wedding.groom.photo;
+
+
+    document.getElementById("bridePhoto").src =
+    wedding.bride.photo;
+
 
 
 });
+
+
+
+
+// TOMBOL OPEN
+
+function openInvitation(){
+
+    document.querySelector(".hero")
+    .style.display="none";
+
+
+    document.querySelector(".opening")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
